@@ -43,40 +43,50 @@
         width: 100%;
     }
 }
-/* CSS */
-.contact-us{
+.contact-us {
   display: flex;
- justify-content:space-between;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 0 10px;
 }
 
+/* LEFT TEXT */
+.contact-left h2 {
+  margin: 0;
+  /* font-size: 20px;          Normal size for laptop */
+  font-weight: 700;
+  white-space: nowrap;      /* Prevent breaking */
+}
 
-
-/* Right block: keep items stacked on the right */
-.contact-right{
+/* RIGHT BLOCK */
+.contact-right {
     margin-right: 25px;
   display: flex;
   flex-direction: column;
-  align-items: flex-end;       /* align phone & email to the right side */
+  align-items: flex-end;
   gap: 4px;
+  white-space: nowrap;
 }
 
-/* Phone and email styles */
-.contact-right .phone,
-.contact-right .email{
-  margin: 0;
-  font-size: 14px;
-  line-height: 1.2;
-  color: #0b3b6f;
-  font-weight: 600;
-  /* text-decoration: none; */
+/* Mobile Fix */
+@media (max-width: 600px) {
+
+  .contact-us {
+    flex-wrap: nowrap;          /* Keep in one line */
+  }
+
+  .contact-left h2 {
+    font-size: 16px;            /* Slightly smaller only on mobile */
+  }
+
+  .contact-right {
+    margin-right: 0px;
+    font-size: 12px;            /* Adjust for small screens */
+  }
 }
 
-/* slightly lighter style for email */
-.contact-right .email{
-  font-weight: 500;
-  color: #333;
-  font-size: 13px;
-}
+
 
 
 
